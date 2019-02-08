@@ -11,7 +11,7 @@ This is an content element for the YOOtheme Pro page builder. Add it to your chi
 - Get post Wordpres 4 type last post, post in category, post by id, post by tags
 - Have 5 style layout card, card list, list, list sticky, slider
 - Can exclude post by ID
-- Can user Grid responsive with card layout
+- Can use grid responsive in card layout
 - and more...
 
 ![content element](https://cl.ly/fabc22942d00/Image%2525202019-02-08%252520at%2525205.50.54%252520PM.png)
