@@ -4,7 +4,7 @@ This is an content element for the YOOtheme Pro page builder. Add it to your chi
 ## Install
 
 1. Create and activate a [child theme](https://yootheme.com/support/yootheme-pro/wordpress/child-themes) for YOOtheme Pro.
-2. Create a folder `/builder` in the child theme and copy content-element folders to `/builder/product` .
+2. Create a folder `/builder` in the child theme and copy content-element folders to `/builder/content-element` .
 3. Go to Wordpress and open the YOOtheme Pro page builder. Add a new element and select the *Post Content*.
 
 ## What can you do?
