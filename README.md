@@ -14,7 +14,7 @@ This is an content element for the YOOtheme Pro page builder. Add it to your chi
 - Can user Grid responsive with card layout
 - and more...
 
-![content element](https://cl.ly/a32d79c49d70/Screen%20Recording%202019-02-08%20at%2005.44%20PM.gif)
+![content element](https://cl.ly/fabc22942d00/Image%2525202019-02-08%252520at%2525205.50.54%252520PM.png)
 
 ## Requirement
 
