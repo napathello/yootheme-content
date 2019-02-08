@@ -1,0 +1,383 @@
+{
+    "@import": "./element.php",
+    "name": "content-element",
+    "title": "Post Content",
+    "icon": "${url:images/icon.svg}",
+    "iconSmall": "${url:images/iconSmall.svg}",
+    "element": true,
+    "container": true,
+    "width": 500,
+    "defaults": {
+      "field_content_number": 4,
+      "field_content_type" : "latest",
+      "field_content_order": "DESC",
+      "field_grid_default": 1,
+      "field_content_orderby": "date",
+      "show_image": "true",
+      "show_date": "true",
+      "show_category": "true",
+      "show_author": "",
+      "show_content": "",
+      "title_truncate": "",
+      "field_content_count": 55,
+      "field_content_more": "...",
+      "field_style_content": "card",
+      "show_dot_nav": ""
+    },
+    "templates": {
+        "render": "./templates/template.php"
+    },
+    "fields": {
+
+        "field_content_number": {
+            "label": "Number of content",
+            "type": "number"
+        },
+
+        "field_content_type": {
+            "type": "select",
+            "label": "Content type",
+            "options": {
+                "Latest Contents": "latest",
+                "By Content Categories": "category",
+                "By Content Tags": "tags",
+                "By Content IDs": "id"
+            }
+        },
+
+        "field_content_category": {
+            "type": "text",
+            "label": "Content Categories",
+            "description": "Comma separated content category ids."
+        },
+
+        "field_content_tag": {
+            "type": "text",
+            "label": "Content Tags",
+            "description": "Comma separated content tags ids."
+        },
+
+        "field_content_id": {
+            "type": "text",
+            "label": "Content IDs",
+            "description": "Comma separated content content ids."
+        },
+
+        "field_content_orderby": {
+            "type": "select",
+            "label": "Contents Orderby",
+            "options": {
+                "None": "",
+                "ID": "ID",
+                "Author": "author",
+                "Title": "title",
+                "Name": "name",
+                "Date": "date",
+                "Rand": "rand"
+            }
+        },
+
+        "field_content_order": {
+            "type": "select",
+            "label": "Contents order",
+            "options": {
+                "Ascending": "ASC",
+                "Descending": "DESC"
+            }
+        },
+
+        "field_grid_default": {
+            "type": "select",
+            "label": "Grid for Phone Portrait",
+            "description": "Set the number of grid columns for each breakpoint. <i>Inherit</i> refers to the number of columns on the next smaller screen size.",
+            "default": "1",
+            "options": {
+                "Inherit": "",
+                "Column 1": "1",
+                "Column 2": "2",
+                "Column 3": "3",
+                "Column 4": "4",
+                "Column 5": "5",
+                "Column 6": "6"
+            }
+        },
+
+        "field_grid_small": {
+            "type": "select",
+            "label": "Grid for Phone Landscape",
+            "description": "Set the number of grid columns for each breakpoint. <i>Inherit</i> refers to the number of columns on the next smaller screen size.",
+            "default": "2",
+            "options": {
+                "Inherit": "",
+                "Column 1": "1",
+                "Column 2": "2",
+                "Column 3": "3",
+                "Column 4": "4",
+                "Column 5": "5",
+                "Column 6": "6"
+            }
+        },
+
+        "field_grid_medium": {
+            "type": "select",
+            "label": "Grid for Tablet Landscapee",
+            "description": "Set the number of grid columns for each breakpoint. <i>Inherit</i> refers to the number of columns on the next smaller screen size.",
+            "default": "4",
+            "options": {
+                "Inherit": "",
+                "Column 1": "1",
+                "Column 2": "2",
+                "Column 3": "3",
+                "Column 4": "4",
+                "Column 5": "5",
+                "Column 6": "6"
+            }
+        },
+
+        "field_grid_large": {
+            "type": "select",
+            "label": "Grid for Desktop",
+            "description": "Set the number of grid columns for each breakpoint. <i>Inherit</i> refers to the number of columns on the next smaller screen size.",
+            "default": "",
+            "options": {
+                "Inherit": "",
+                "Column 1": "1",
+                "Column 2": "2",
+                "Column 3": "3",
+                "Column 4": "4",
+                "Column 5": "5",
+                "Column 6": "6"
+            }
+        },
+
+        "field_grid_xlarge": {
+            "type": "select",
+            "label": "Grid for Large Screens",
+            "description": "Set the number of grid columns for each breakpoint. <i>Inherit</i> refers to the number of columns on the next smaller screen size.",
+            "default": "",
+            "options": {
+                "Inherit": "",
+                "Column 1": "1",
+                "Column 2": "2",
+                "Column 3": "3",
+                "Column 4": "4",
+                "Column 5": "5",
+                "Column 6": "6"
+            }
+        },
+
+        "field_exclude_id": {
+          "type": "text",
+          "label": "Exclude Content IDs",
+          "description": "Comma separated content content ids."
+        },
+
+        "show_image": {
+            "label": "Show Image",
+            "type": "checkbox",
+            "text": "Show image content"
+        },
+
+        "show_date": {
+            "label": "Show Date",
+            "type": "checkbox",
+            "text": "Show date content"
+        },
+
+        "show_category": {
+            "label": "Show Date",
+            "type": "checkbox",
+            "text": "Show category content"
+        },
+
+        "show_author": {
+            "label": "Show Author",
+            "type": "checkbox",
+            "text": "Show author content"
+        },
+
+        "show_content": {
+            "label": "Show Content",
+            "type": "checkbox",
+            "text": "Show content description"
+        },
+
+        "show_dot_nav": {
+            "label": "Show Dot-Nav",
+            "type": "checkbox",
+            "text": "Show dot-nav for slider stye"
+        },
+
+        "title_truncate": {
+          "label": "Use Truncate",
+          "type": "checkbox",
+          "text": "check box cut text on titile"
+        },
+
+        "content_sticky": {
+          "label": "Sticky Content",
+          "type": "checkbox",
+          "text": "show content on sticky only"
+        },
+
+        "field_content_count": {
+          "type": "number",
+          "label": "Number trim text",
+          "description": "setting numbber text need to show",
+          "placeholder": "55"
+        },
+
+        "field_content_more": {
+          "type": "text",
+          "label": "Text after trim",
+          "description": "setting text after trim text",
+          "placeholder": "..."
+        },
+
+        "field_image_size": {
+            "type": "select",
+            "label": "Image Size",
+            "default": "large",
+            "options": {
+                "thumbnail": "thumbnail",
+                "medium": "medium",
+                "medium_large": "medium_large",
+                "large": "large",
+                "full": "full"
+            }
+        },
+
+        "field_style_content": {
+            "type": "select",
+            "label": "Style Content",
+            "description": "set style content you want",
+            "options": {
+                "Card": "card",
+                "List Card": "list-card",
+                "List": "list",
+                "List Sticky": "list-sticky",
+                "Slider": "slider"
+            }
+        },
+
+        "name": "${builder:name}",
+        "status": "${builder:status}",
+        "id": "${builder:id}",
+        "class": "${builder:cls}",
+        "css": {
+            "label": "CSS",
+            "description": "Enter your own custom CSS. The following selectors will be prefixed automatically for this element: <code>.el-element</code>, <code>.el-item</code>, <code>.el-title</code>, <code>.el-meta</code>, <code>.el-content</code>, <code>.el-image</code>, <code>.el-link</code>",
+            "type": "editor",
+            "editor": "code",
+            "mode": "css",
+            "attrs": {
+                "debounce": 500
+            }
+        }
+
+    },
+    "fieldset": {
+        "default": {
+            "type": "tabs",
+            "fields": [
+                {
+                    "title": "Content",
+                    "fields": [
+
+                      {
+                          "label": "Content Data",
+                          "type": "group",
+                          "divider": true,
+                          "fields": [
+                              "field_content_number",
+                              "field_content_type",
+                              "field_content_category",
+                              "field_content_tag",
+                              "field_content_id",
+                              "field_content_orderby",
+                              "field_content_order"
+                          ]
+                      },
+                      {
+                          "label": "Grid",
+                          "type": "group",
+                          "divider": true,
+                          "fields": [
+                            "field_grid_default",
+                            "field_grid_small",
+                            "field_grid_medium",
+                            "field_grid_large",
+                            "field_grid_xlarge"
+                          ]
+                      },
+                      {
+                          "label": "Exclude",
+                          "type": "group",
+                          "divider": true,
+                          "fields": [
+                            "field_exclude_id"
+                          ]
+                      }
+
+
+                    ]
+
+                },
+                {
+                    "title": "Setting",
+
+                    "fields": [
+                      {
+                          "label": "Style Content",
+                          "type": "group",
+                          "divider": true,
+                          "fields": [
+                            "field_style_content"
+                          ]
+                      },
+                      {
+                          "label": "Image Setting",
+                          "type": "group",
+                          "divider": true,
+                          "fields": [
+                            "show_image",
+                            "field_image_size"
+                          ]
+                      },
+                      {
+                          "label": "Meta Setting",
+                          "type": "group",
+                          "divider": true,
+                          "fields": [
+                            "show_date",
+                            "show_category",
+                            "show_author"
+                          ]
+                      },
+                      {
+                          "label": "Content Setting",
+                          "type": "group",
+                          "divider": true,
+                          "fields": [
+                            "show_content",
+                            "field_content_count",
+                            "field_content_more"
+                          ]
+                      },
+                      {
+                          "label": "Utility Setting",
+                          "type": "group",
+                          "divider": true,
+                          "fields": [
+                            "title_truncate",
+                            "content_sticky",
+                            "show_dot_nav"
+                          ]
+                      }
+                    ]
+                },
+                "${builder:advanced}"
+            ]
+        }
+    }
+}
