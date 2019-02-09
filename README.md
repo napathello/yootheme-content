@@ -19,5 +19,4 @@ This is an content element for the YOOtheme Pro page builder. Add it to your chi
 ## Requirement
 
 - YOOtheme Pro version 1.8 +
-- Woocmmerce 3.5+
 - Wordpress 5.0+
